@@ -16,14 +16,14 @@ export default function Testimonials() {
 
   return (
     <FadeInWhenVisible>
-      <section className="relative py-24 px-4 overflow-hidden">
+      <section className="relative py-5 px-4 overflow-hidden">
         {/* Background Image */}
         <div
-          className="absolute inset-0 z-0 w-full"
+          className="absolute inset-0 z-0 h-[500px] md:block hidden"
           style={{
             backgroundImage:
               'url("/testimonial-bg.jpg")',
-            backgroundSize: "contain",
+            backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             opacity: 1,

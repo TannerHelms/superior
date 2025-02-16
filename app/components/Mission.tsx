@@ -12,9 +12,10 @@ export default function Mission() {
     <FadeInWhenVisible>
       <section className="py-24 px-8 bg-[#EEEEEE]" id="mission">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Mission</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+
+          <div className="grid md:grid-cols-2 gap-12 items-start justify-center">
             <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Mission</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
                 To provide a standardized framework that guides financial information recording, analysis, and
                 communication to grow your potential and minimize your tax liability. By adhering to these principles,

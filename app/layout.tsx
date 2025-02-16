@@ -2,6 +2,7 @@ import "./globals.css"
 import { Inter } from "next/font/google"
 import Navigation from "./components/Navigation"
 import Footer from "./components/Footer"
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,6 +23,9 @@ export default function RootLayout({
           <Navigation />
           <main className="flex-1">{children}</main>
           <Footer />
+          <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[500px] rounded-[10px]">
+            <Toaster />
+          </div>
         </div>
       </body>
     </html>

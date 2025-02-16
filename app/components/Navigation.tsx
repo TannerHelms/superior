@@ -44,6 +44,9 @@ export default function Navigation() {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-8">
+          <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
+            Home
+          </Link>
           <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
             About Us
           </Link>

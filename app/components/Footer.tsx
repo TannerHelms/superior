@@ -41,7 +41,7 @@ export default function Footer() {
             <div className="space-y-2">
               <a href="tel:+12086080931" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
                 <Phone className="h-4 w-4" />
-                1+(208)608-0931
+                (208) 608-0931
               </a>
               <a
                 href="mailto:superior.cloud.acctg@gmail.com"

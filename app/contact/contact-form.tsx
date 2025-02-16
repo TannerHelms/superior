@@ -7,15 +7,69 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent } from "@/components/ui/card"
+import { sendEmail } from "./send-email"
+
+import { ToastAction } from "@/components/ui/toast"
+import { useToast } from "@/hooks/use-toast"
+
+export type EmailContent = {
+  name: string
+  email: string
+  phone: string
+  preferredContact: string
+  taxFiling: string
+  revenue: string
+  quickbooks: string
+  service: string
+}
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     // Add form submission logic here
-    setTimeout(() => setIsSubmitting(false), 1000)
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    const name = data.name.toString()
+    const email = data.email.toString()
+    const phone = data.phone.toString()
+    const preferredContact = data["preferred-contact"].toString()
+    const taxFiling = data["tax-filing"].toString()
+    const revenue = data.revenue.toString();
+    const quickbooks = data["quickbooks"].toString()
+    const service = data.service.toString();
+
+    const resp = await sendEmail({
+      name,
+      email,
+      phone,
+      preferredContact,
+      taxFiling,
+      revenue,
+      quickbooks,
+      service,
+    })
+    if (resp === "error") {
+      toast({
+        variant: "destructive",
+        title: "Error!",
+        description: "An error occurred while submitting your request.",
+        className: "bg-red-500 text-white"
+      })
+      setIsSubmitting(false);
+      return;
+    } else if (resp === "success") {
+      toast({
+        variant: "default",
+        title: "Success!",
+        description: "Your form has been submitted to Superior Cloud Accounting.",
+        className: "bg-green-500 text-white"
+      })
+    }
+    setIsSubmitting(false);
   }
 
   return (
@@ -44,9 +98,9 @@ export default function ContactForm() {
                 <SelectTrigger>
                   <SelectValue placeholder="Select preferred contact" />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="email">Email</SelectItem>
-                  <SelectItem value="phone">Phone</SelectItem>
+                <SelectContent className="bg-white">
+                  <SelectItem className="hover:cursor-pointer" value="email">Email</SelectItem>
+                  <SelectItem className="hover:cursor-pointer" value="phone">Phone</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -59,10 +113,10 @@ export default function ContactForm() {
                 <SelectTrigger>
                   <SelectValue placeholder="Select tax filing type" />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="individual">Individual</SelectItem>
-                  <SelectItem value="business">Business</SelectItem>
-                  <SelectItem value="non-profit">Non-Profit</SelectItem>
+                <SelectContent className="bg-white">
+                  <SelectItem className="hover:cursor-pointer" value="individual">Individual</SelectItem>
+                  <SelectItem className="hover:cursor-pointer" value="business">Business</SelectItem>
+                  <SelectItem className="hover:cursor-pointer" value="non-profit">Non-Profit</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -74,7 +128,7 @@ export default function ContactForm() {
 
           <div className="space-y-2">
             <Label>Do you currently use Quickbooks?</Label>
-            <RadioGroup defaultValue="no" className="flex gap-4">
+            <RadioGroup defaultValue="no" className="flex gap-4" name="quickbooks">
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="yes" id="yes" />
                 <Label htmlFor="yes">Yes</Label>
@@ -92,13 +146,13 @@ export default function ContactForm() {
               <SelectTrigger>
                 <SelectValue placeholder="Select service" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="cleanup">Cleanup</SelectItem>
-                <SelectItem value="monthly">Monthly Accounting</SelectItem>
-                <SelectItem value="training">QuickBooks Training</SelectItem>
-                <SelectItem value="advisory">Financial Advisory</SelectItem>
-                <SelectItem value="tax">Tax Preparation</SelectItem>
-                <SelectItem value="multilingual">Multi-lingual Services</SelectItem>
+              <SelectContent className="bg-white">
+                <SelectItem className="hover:cursor-pointer" value="cleanup">Cleanup</SelectItem>
+                <SelectItem className="hover:cursor-pointer" value="monthly">Monthly Accounting</SelectItem>
+                <SelectItem className="hover:cursor-pointer" value="training">QuickBooks Training</SelectItem>
+                <SelectItem className="hover:cursor-pointer" value="advisory">Financial Advisory</SelectItem>
+                <SelectItem className="hover:cursor-pointer" value="tax">Tax Preparation</SelectItem>
+                <SelectItem className="hover:cursor-pointer" value="multilingual">Multi-lingual Services</SelectItem>
               </SelectContent>
             </Select>
           </div>

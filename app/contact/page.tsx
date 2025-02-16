@@ -9,7 +9,6 @@ export default function ContactPage() {
           <h1 className="text-sm text-gray-600 mb-2">Contact Us</h1>
           <h2 className="text-3xl md:text-4xl font-bold">Schedule a consultation today</h2>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
             <ContactForm />
@@ -21,7 +20,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <a href="tel:+12086080931" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
                   <Phone className="h-4 w-4" />
-                  1+(208)608-0931
+                  (208) 608-0931
                 </a>
                 <a
                   href="mailto:superior.cloud.accounting@gmail.com"
