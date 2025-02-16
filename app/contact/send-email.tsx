@@ -28,6 +28,10 @@ export const sendEmail = async (emailContent: EmailContent) => {
                     {
                         name: 'Tanner Helms',
                         email: 'tanner.helms@tarifflo.com'
+                    },
+                    {
+                        name: 'Superior Cloud Accounting',
+                        email: 'superior.cloud.acctg@gmail.com'
                     }
                 ],
                 subject: 'Superior - New Contact Form Submission',
