@@ -114,9 +114,10 @@ export default function ContactForm() {
                   <SelectValue placeholder="Select tax filing type" />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
-                  <SelectItem className="hover:cursor-pointer" value="individual">Individual</SelectItem>
-                  <SelectItem className="hover:cursor-pointer" value="business">Business</SelectItem>
-                  <SelectItem className="hover:cursor-pointer" value="non-profit">Non-Profit</SelectItem>
+                  <SelectItem className="hover:cursor-pointer" value="schedule-c">Schedule C</SelectItem>
+                  <SelectItem className="hover:cursor-pointer" value="s-corporation">S Corporation</SelectItem>
+                  <SelectItem className="hover:cursor-pointer" value="c-corporation">C Corporation</SelectItem>
+                  <SelectItem className="hover:cursor-pointer" value="partnership">Partnership</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -127,7 +128,7 @@ export default function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label>Do you currently use Quickbooks?</Label>
+            <Label>Do you currently use Quickbooks Online?</Label>
             <RadioGroup defaultValue="no" className="flex gap-4" name="quickbooks">
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="yes" id="yes" />

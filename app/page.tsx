@@ -20,6 +20,8 @@ export default function Home() {
           loop
           muted
           className="w-full h-full object-cover"
+          controls={false}
+          style={{ pointerEvents: "none" }}
         >
           <source src="/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.

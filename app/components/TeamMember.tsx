@@ -22,11 +22,6 @@ export default function TeamMember({ name, title, bio, image }: TeamMemberProps)
       <CardContent>
         <p className="text-gray-600 text-sm">{bio}</p>
       </CardContent>
-      <CardFooter className="flex justify-center">
-        <Button variant="link" className="text-[#2B579A]">
-          View →
-        </Button>
-      </CardFooter>
     </Card>
   )
 }

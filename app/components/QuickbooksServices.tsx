@@ -9,7 +9,7 @@ export default function QuickbooksServices() {
       image: "/cleanup.png",
     },
     {
-      title: "Monthly Accounting",
+      title: "Quickbooks Online Accounting",
       image: "/monthly-accounting.png",
     },
     {
@@ -35,7 +35,8 @@ export default function QuickbooksServices() {
       <FadeInWhenVisible>
         <section className="py-24 px-4 bg-white" id="services">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our Quickbooks Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">What we provide</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Base Plans starting at $300 Monthly</h2>
             <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-4xl mx-auto">
               {services.map((service, index) => (
                 <StaggerItem key={index} className="flex flex-col items-center text-center">
