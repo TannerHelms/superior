@@ -5,33 +5,6 @@ import Image from "next/image"
 import { FadeInWhenVisible, StaggerChildren, StaggerItem } from "../components/Animations"
 
 export default function AboutPage() {
-  const team = [
-    {
-      name: "Stephanie Helms, CPA",
-      title: "Co-Founder",
-      image: "/placeholder.svg",
-      bio: "Stephanie Helms CPA, Co-Founder Superior Cloud Accounting. Graduated from Northern Illinois University with a Bachelors in Economics and Masters in Finance. She has worked 25 years in accounting and finance in both the private and public sectors.",
-    },
-    {
-      name: "Gary Helms, MBA",
-      title: "Co-Founder",
-      image: "/placeholder.svg",
-      bio: "Gary Helms, MBA, Co-Founder Superior Cloud Accounting. Graduated from Northern Illinois University with a Masters degree in Business Administration. He also holds Bachelors and Masters degrees from Utah State University. He has worked 20 years in finance and accounting.",
-    },
-    {
-      name: "Sarah Aster",
-      title: "Sr. Accountant",
-      image: "/placeholder.svg",
-      bio: "Sarah Astier joined Superior Cloud Accounting in 2022. She is a Senior Accountant holding a J.D from Golden Gate University and also a degree in International Trade Law from the University of Paris X - Nanterre. Before becoming an accountant, she practiced law.",
-    },
-    {
-      name: "Hailey Bell",
-      title: "QBO ProAdvisor",
-      image: "/placeholder.svg",
-      bio: "Hailey Bell is certified as a QuickBooks Online ProAdvisor. She holds a Master's degree in Agriculture focusing on Business Management and Equine Reproduction from Texas A&M. Hailey loves her work at Superior Cloud, using her problem-solving skills to help clients succeed.",
-    },
-  ]
-
   return (
     <>
       <FadeInWhenVisible>
@@ -73,7 +46,7 @@ export default function AboutPage() {
                 <TeamMember
                   name="Hailey Bell"
                   title="QBO ProAdvisor"
-                  image="/hailey.jpeg"
+                  image="/haileybell.jpg"
                   bio="Hailey Bell is certified as a QuickBooks Online ProAdvisor. She holds a Master's degree in Agriculture focusing on Business Management and Equine Reproduction from Texas A&M. Hailey loves her work at Superior Cloud, using her problem-solving skills to help clients succeed."
                   scale={1.3}
                 />
