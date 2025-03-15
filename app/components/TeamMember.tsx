@@ -5,24 +5,29 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 interface TeamMemberProps {
   name: string
   title: string
-  bio: string
   image: string
+  bio: string
+  scale?: number
 }
 
-export default function TeamMember({ name, title, bio, image }: TeamMemberProps) {
+export default function TeamMember({ name, title, image, bio, scale = 1 }: TeamMemberProps) {
   return (
-    <Card className="h-full">
-      <CardHeader className="flex items-center">
-        <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-200 mb-4">
-          <Image src={image || "/placeholder.svg"} alt={name} width={128} height={128} className="object-cover" />
+    <div className="bg-white p-6 rounded-lg shadow-sm">
+      <div className="flex flex-col items-center">
+        <div className="w-48 h-48 relative overflow-hidden rounded-full">
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-cover"
+            style={{ transform: `scale(${scale})` }}
+          />
         </div>
-        <CardTitle className="text-xl text-center">{name}</CardTitle>
-        <CardDescription className="text-center">{title}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p className="text-gray-600 text-sm">{bio}</p>
-      </CardContent>
-    </Card>
+        <h3 className="mt-4 text-xl font-semibold">{name}</h3>
+        <p className="text-gray-600">{title}</p>
+        <p className="mt-4 text-gray-600 text-center">{bio}</p>
+      </div>
+    </div>
   )
 }
 
