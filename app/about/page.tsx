@@ -47,7 +47,7 @@ export default function AboutPage() {
                   name="Hailey Bell"
                   title="QBO ProAdvisor"
                   image="/haileybell.jpg"
-                  bio="Hailey Bell is certified as a QuickBooks Online ProAdvisor. She holds a Master's degree in Agriculture focusing on Business Management and Equine Reproduction from Texas A&M. Hailey loves her work at Superior Cloud, using her problem-solving skills to help clients succeed."
+                  bio="Hailey Bell is certified as a QuickBooks Online ProAdvisor. She holds a Masters degree in Agriculture focusing on Business Management and Equine Reproduction from Texas A&M. Hailey loves her work at Superior Cloud, using her problem-solving skills to help clients succeed."
                   scale={1.3}
                 />
               </StaggerItem>

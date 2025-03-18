@@ -49,7 +49,7 @@ export default function Home() {
           <div className="container mx-auto max-w-6xl">
             <div className="max-w-2xl space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                CPA Precision in Every Number
+                CPA Precision in Every Number Powered by Quickbooks Online
               </h1>
               <p className="text-lg md:text-xl text-gray-600 max-w-xl">
                 Mastering Tax and Accounting complexity with simplicity—we have your back one transaction at a time.

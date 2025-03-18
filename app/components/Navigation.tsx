@@ -35,9 +35,9 @@ export default function Navigation() {
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-pxa8Nj4opFwBJHffq3ERGwl5BXmZAb.png"
             alt="Superior Cloud Accounting"
-            width={150}
-            height={60}
-            className="h-12 w-auto"
+            width={200}
+            height={80}
+            className="h-20 w-auto"
             priority
           />
         </Link>
