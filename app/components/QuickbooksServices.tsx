@@ -32,9 +32,9 @@ export default function QuickbooksServices() {
   ]
 
   return (
-    <div className="mt-[300px]">
+    <div>
       <FadeInWhenVisible>
-        <section className="py-24 px-4 bg-white" id="services">
+        <section className="pt-[350px] md:pt-64 pb-24 px-4 bg-white" id="services">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">What we provide</h2>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Base Plans starting at $300 Monthly</h2>

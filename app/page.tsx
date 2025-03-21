@@ -14,7 +14,7 @@ export default function Home() {
       <Navigation />
 
       {/* Background Video */}
-      <div className="absolute top-0 left-0 w-full h-[850px] z-0">
+      <div className="absolute top-0 left-0 w-full h-[950px] z-0">
         <video
           autoPlay
           loop
@@ -27,20 +27,6 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
         <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50"></div>
-      </div>
-
-      <div className="absolute top-[780px] left-0 w-screen overflow-hidden leading-[0] z-20 bg-transparent max-w-full">
-        <svg
-          className="relative block w-screen h-[70px]"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1000 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 120C600 40 600 40 1000 120H0z"
-            className="fill-white"
-          ></path>
-        </svg>
       </div>
 
       {/* Hero Section */}
@@ -68,9 +54,9 @@ export default function Home() {
       </FadeInWhenVisible>
 
       {/* Certifications Section */}
-      <div className="absolute top-[550px] left-0 w-screen overflow-hidden leading-[0] z-20 bg-transparent max-w-full">
+      <div className="absolute top-[600px] left-0 w-full z-10">
         <FadeInWhenVisible>
-          <section className="py-16 px-4 w-full z-10">
+          <section className="py-16 px-4 w-full">
             <div className="container mx-auto max-w-6xl">
               <div className="grid grid-cols-3 gap-16 justify-items-center max-w-3xl mx-auto">
                 <div className="flex flex-col items-center pt-[40px]">
@@ -104,6 +90,21 @@ export default function Home() {
             </div>
           </section>
         </FadeInWhenVisible>
+      </div>
+
+      {/* Curved transition */}
+      <div className="absolute top-[882px] left-0 w-screen overflow-hidden leading-[0] z-20 bg-transparent max-w-full">
+        <svg
+          className="relative block w-screen h-[70px]"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="xMidYMax slice"
+        >
+          <path
+            d="M0 120C300 85 900 85 1200 120H0z"
+            className="fill-white"
+          ></path>
+        </svg>
       </div>
 
       {/* Quickbooks Services Section */}
