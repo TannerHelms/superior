@@ -23,7 +23,7 @@ export default function ServicesPage() {
         "Bookkeeping is a vital element for the success and sustainability of any business. Maintaining precise monthly financial records enables you to make data-driven decisions, manage cash flow effectively, and prepare for tax obligations without stress, reducing risk of errors and potential fines from tax authorities. Our proactive approach provides a dedicated bookkeeper that enables your business to benefit from accounting services tailored to your specific needs.",
     },
     {
-      title: "Online Quickbooks Training",
+      title: "Quickbooks Online Training",
       icon: "/training.png",
       description:
         "We are Fast, Experienced Professionals with a wide range of experience in multiple industries to assist you in learning to maintain your own QuickBooks. We help small business owners build confidence with comprehensive training and live help tailored to meet your needs.",

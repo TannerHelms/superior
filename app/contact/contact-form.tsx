@@ -129,7 +129,7 @@ export default function ContactForm() {
 
           <div className="space-y-2">
             <Label>Do you currently use Quickbooks Online?</Label>
-            <RadioGroup defaultValue="no" className="flex gap-4" name="quickbooks">
+            <RadioGroup defaultValue="yes" className="flex gap-4" name="quickbooks">
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="yes" id="yes" />
                 <Label htmlFor="yes">Yes</Label>

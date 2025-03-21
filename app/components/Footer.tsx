@@ -44,11 +44,11 @@ export default function Footer() {
                 (208) 608-0931
               </a>
               <a
-                href="mailto:superior.cloud.acctg@gmail.com"
+                href="mailto:admin@superiorcloudaccounting.com"
                 className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
               >
                 <Mail className="h-4 w-4" />
-                superior.cloud.acctg@gmail.com
+                admin@superiorcloudaccounting.com
               </a>
             </div>
           </div>

@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import { FadeInWhenVisible, StaggerChildren, StaggerItem } from "./Animations"
@@ -9,7 +10,7 @@ export default function QuickbooksServices() {
       image: "/cleanup.png",
     },
     {
-      title: "Quickbooks Online Accounting",
+      title: "Monthly Accounting",
       image: "/monthly-accounting.png",
     },
     {
@@ -39,16 +40,22 @@ export default function QuickbooksServices() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Base Plans starting at $300 Monthly</h2>
             <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-4xl mx-auto">
               {services.map((service, index) => (
-                <StaggerItem key={index} className="flex flex-col items-center text-center">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={96}
-                    height={96}
-                    className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#E8F5E9] mb-4"
-                  />
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">{service.title}</h3>
-                </StaggerItem>
+                <div onClick={() => {
+                  window.location.href = "/services"
+                }}
+                  className="cursor-pointer"
+                >
+                  <StaggerItem key={index} className="flex flex-col items-center text-center">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={96}
+                      height={96}
+                      className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#E8F5E9] mb-4"
+                    />
+                    <h3 className="text-lg font-medium text-gray-900 mb-2">{service.title}</h3>
+                  </StaggerItem>
+                </div>
               ))}
             </StaggerChildren>
             <div className="text-center mt-12">
