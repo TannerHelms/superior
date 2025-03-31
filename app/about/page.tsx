@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <>
       <FadeInWhenVisible>
-        <div className="py-24 px-4 bg-gray-50">
+        <div className="pt-40 pb-24 px-4 bg-gray-50">
           <div className="container mx-auto max-w-6xl">
             <div className="mb-12">
               <h1 className="text-sm text-gray-600 mb-2">About Us</h1>

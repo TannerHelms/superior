@@ -37,7 +37,7 @@ export default function Navigation() {
             alt="Superior Cloud Accounting"
             width={200}
             height={80}
-            className="h-20 w-auto"
+            className="h-24 w-auto"
             priority
           />
         </Link>

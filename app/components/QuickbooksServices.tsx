@@ -10,11 +10,11 @@ export default function QuickbooksServices() {
       image: "/cleanup.png",
     },
     {
-      title: "Monthly Accounting",
+      title: "Quickbooks Accounting",
       image: "/monthly-accounting.png",
     },
     {
-      title: "Online Quickbooks Training",
+      title: "Quickbooks Online Training",
       image: "training.png",
     },
     {

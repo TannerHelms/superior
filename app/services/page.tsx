@@ -17,7 +17,7 @@ export default function ServicesPage() {
         "We specialize in providing efficient catch-up and clean-up bookkeeping services tailored to your business needs. Our U.S.-based bookkeepers are well-versed in various industries and can help you get your financial records organized. We ensure transparency and clarity in our process, giving you peace of mind as we bring your online quickbooks up to date.",
     },
     {
-      title: "Monthly Accounting",
+      title: "Quickbooks Accounting",
       icon: "/monthly-accounting.png",
       description:
         "Bookkeeping is a vital element for the success and sustainability of any business. Maintaining precise monthly financial records enables you to make data-driven decisions, manage cash flow effectively, and prepare for tax obligations without stress, reducing risk of errors and potential fines from tax authorities. Our proactive approach provides a dedicated bookkeeper that enables your business to benefit from accounting services tailored to your specific needs.",
@@ -51,7 +51,7 @@ export default function ServicesPage() {
   return (
     <>
       <FadeInWhenVisible>
-        <div className="py-24 px-8 bg-gray-50 mt-[30px]">
+        <div className="pt-40 pb-24 px-4 bg-gray-50">
           <div className="container mx-auto max-w-6xl">
             <div className="mb-12">
               <h1 className="text-sm text-gray-600 mb-2">Our Services</h1>
