@@ -20,9 +20,9 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Quick links</h3>
-            <nav className="flex flex-col space-y-2">
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="font-semibold text-gray-900 mb-4 text-center md:text-left">Quick links</h3>
+            <nav className="flex flex-col space-y-2 items-center md:items-start">
               <Link href="/" className="text-[#2B579A] hover:underline">
                 Home
               </Link>
@@ -36,9 +36,9 @@ export default function Footer() {
           </div>
 
           {/* Contact Information */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Contact</h3>
-            <div className="space-y-2">
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="font-semibold text-gray-900 mb-4 text-center md:text-left">Contact</h3>
+            <div className="space-y-2 flex flex-col items-center md:items-start">
               <a href="tel:+12086080931" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
                 <Phone className="h-4 w-4" />
                 (208) 608-0931
